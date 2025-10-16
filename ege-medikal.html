@@ -7,13 +7,27 @@
 <style>
   :root { --brand:#004481; }
   html,body { margin:0; padding:0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         line-height:1.6; max-width: 860px; margin:0 auto; padding: 16px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.6; max-width: 860px; margin:0 auto; padding: 16px;
+  }
   header { position: sticky; top:0; background:#fff; padding:8px 0 12px; border-bottom:1px solid #eee; margin-bottom:16px; }
   h1 { font-size: 22px; margin: 4px 0 6px; color: var(--brand); }
   .meta { color:#555; font-size: 13px; }
   details { border:1px solid #e5e7eb; border-radius:10px; padding: 10px 12px; margin: 12px 0; background:#fafafa; }
-  summary { cursor:pointer; font-weight:600; color:#111; }
+
+  /* Summary başlıkları daha güçlü görünsün */
+  summary {
+    cursor:pointer; font-weight:700; color: var(--brand); font-size:17px; padding:4px 0;
+    transition: color .2s ease;
+  }
+  summary:hover { color:#0069aa; }
+
+  /* Okunabilirlik: paragraf ve listeler */
+  p { margin:10px 0 16px; line-height:1.7; }
+  ul, ol { margin:10px 0 18px 20px; padding-left:20px; }
+  li { margin-bottom:6px; }
+
   .section { margin-top:8px; color:#111; white-space:pre-wrap; }
   .cta { display:inline-block; background: var(--brand); color:#fff; border:none; padding:8px 12px; border-radius:8px; text-decoration:none; }
   .muted { color:#6b7280; font-size: 13px; }
@@ -89,35 +103,35 @@ Temsilci ikinci ziyarete giderken aşağıdaki ürünleri planlamalı:
    8. Uluslararası Para Transferi: Distribütör ödemeleri kolaylaştırılır.
    9. Bayi Kart: Tahsilat kolaylığı + kampanya avantajı.
 
-SORULAR / DEĞERLENDİRME
+<strong>SORULAR / DEĞERLENDİRME</strong>
 --> Levent Bey’in çekincelerini aşmak için hangi ürünler daha sade ve hızlı sunulmalı?
 --> DBS ve Tedarikçi POS birlikte nasıl bir nakit akışı dengesi kurabilir?
 --> Nakit akış yönetimi için Hesap Özeti API ve Fatura İskontosu ne tür avantajlar sağlar?
---> “Parayı göremeden mal alıyoruz” diyen biri için hangi model daha koruyucu olur?
+--> “Parayı görmeden mal alıyoruz” diyen biri için hangi model daha koruyucu olur?
 --> Bayilere daha sistematik bir satış-tahsilat zinciri kurmak için hangi ürün kombinasyonu önerilmeli?
 
-Eğitmenin Gözünden Yanıtlar
+<strong>Eğitmenin Gözünden Yanıtlar</strong>
 Levent Bey gibi prosedürden kaçınan biri için 'Ödemen Tamam', 'Fatura Tahsilatı' ve 'Dijital Fatura İskontosu' sade arayüzleri ve hızlı süreçleriyle öne çıkar.
 DBS ile bayilere güvenli vadeli satış yapılır, Tedarikçi POS ise alım tarafında kart destekli likidite sağlar. Bu ikili, nakit akışı dengesini sağlamlaştırır.
-Hesap Özeti API ile tüm ödeme/tahsilat hareketleri sistemle entegre çalışır, muhasebe süreci hızlanır. Fatura İskontosu ise uzun vadeli alacakları hızlıca nakde çevirir.
+Hesap Özeti API ile tüm ödeme/tahsilat hareketleri sistemle entegre çalışır, muhasebe süreci hızlanır. Fatura İskontosu ise özellikle kamuya satış yapan firmalarda tahsilat süresini 150 günden 5 güne çekebilir. Bu, piyasadaki en güçlü likidite araçlarından biridir.
 “Parayı görmeden mal almak” risklidir. DBS sistemi, bayi için banka güvencesi sunar. Böylece satıcı kendini korur.
 DBS + Bayi Kart + Fatura Tahsilatı kombinasyonu, bayi ile daha güvenli ve takip edilebilir bir satış-tahsilat ilişkisi kurar.
 
 Levent Bey’in çekincelerini aşmak için hangi ürünler daha sade ve hızlı sunulmalı?
-Eğitmen yorumu: Levent Bey prosedürden korkuyor. Ona karmaşık kredi süreçleri yerine, "Ödemen Tamam" gibi sadece talimat verip unutabileceği pratik ürünler sunulmalı. Ayrıca DBS gibi otomatik çalışan sistemler güven hissi yaratır. Kolay anlatılabilen, dijital olmayan kanallar üzerinden bile uygulanabilen çözümler tercih edilmeli.
+<strong>Eğitmen yorumu:</strong> Levent Bey prosedürden korkuyor. Ona karmaşık kredi süreçleri yerine, "Ödemen Tamam" gibi sadece talimat verip unutabileceği pratik ürünler sunulmalı. Ayrıca DBS gibi otomatik çalışan sistemler güven hissi yaratır. Kolay anlatılabilen, dijital olmayan kanallar üzerinden bile uygulanabilen çözümler tercih edilmeli.
 DBS ve Tedarikçi POS birlikte nasıl bir nakit akışı dengesi kurabilir?
 
-Eğitmen yorumu:
+<strong>Eğitmen yorumu:</strong>
 DBS ile bayilere tahsilat güvence altına alınırken, Tedarikçi POS sayesinde Levent Bey de kendi alımlarında vade avantajı yakalar. Böylece "alışta vade - satışta güvenli tahsilat" döngüsü kurulmuş olur. İşlem hacmine göre iki sistem birbirini besler.
 Nakit akış yönetimi için Hesap Özeti API ve Fatura İskontosu ne tür avantajlar sağlar?
 
-Eğitmen yorumu: API destekli hesap özeti, finansçıların günlük nakit durumunu anlık görmesini sağlar. Geçmişi geriden raporlamak yerine anlık veri ile hareket edilir. Fatura İskontosu ise özellikle kamuya satış yapan firmalarda tahsilat süresini 150 günden 5 güne çekebilir. Bu, piyasadaki en güçlü likidite araçlarından biridir.
-“Parayı göremeden mal alıyoruz” diyen biri için hangi model daha koruyucu olur?
+<strong>Eğitmen yorumu:</strong> API destekli hesap özeti, finansçıların günlük nakit durumunu anlık görmesini sağlar. Geçmişi geriden raporlamak yerine anlık veri ile hareket edilir. Fatura İskontosu ise özellikle kamuya satış yapan firmalarda tahsilat süresini 150 günden 5 güne çekebilir. Bu, piyasadaki en güçlü likidite araçlarından biridir.
+“Parayı görmeden mal alıyoruz” diyen biri için hangi model daha koruyucu olur?
 
-Eğitmen yorumu: Burada çözüm DBS’dir. Çünkü bayinin limiti varsa tahsilat riski ortadan kalkar. Mal gönderilirken tahsilat garantilenmiş olur. Levent Bey artık "gönderelim ama ödeme gelmezse?" stresini yaşamaz.
+<strong>Eğitmen yorumu:</strong> Burada çözüm DBS’dir. Çünkü bayinin limiti varsa tahsilat riski ortadan kalkar. Mal gönderilirken tahsilat garantilenmiş olur. Levent Bey artık "gönderelim ama ödeme gelmezse?" stresini yaşamaz.
 Bayilere daha sistematik bir satış-tahsilat zinciri kurmak için hangi ürün kombinasyonu önerilmeli?
 
-Eğitmen yorumu:
+<strong>Eğitmen yorumu:</strong>
 DBS + DBS İskontosu + Bayi Kart üçlüsü önerilir. DBS ile vadeli tahsilat güvenceye alınır. İskonto ile beklenen alacak erkene çekilir. Bayi Kart ise POS üzerinden hem kampanya hem de düzenli akış sağlar. Bu kombinasyon bayilik sistemlerinde en çok tercih edilen zincirdir.</div>
 </details>
 
