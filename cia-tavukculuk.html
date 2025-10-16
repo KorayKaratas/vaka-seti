@@ -5,88 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIA Tavukçuluk Vaka Çalışması</title>
 <style>
-  :root { --brand:#004481; }
+  :root { --brand:#004481; --light:#f9fafb; --gray:#6b7280; }
   html,body { margin:0; padding:0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height:1.6;
-    max-width: 860px;
-    margin:0 auto;
-    padding: 16px;
-  }
-  header {
-    position: sticky;
-    top:0;
-    background:#fff;
-    padding:8px 0 12px;
-    border-bottom:1px solid #eee;
-    margin-bottom:16px;
-  }
-  h1 {
-    font-size: 22px;
-    margin: 4px 0 6px;
-    color: var(--brand);
-  }
-  .meta { color:#555; font-size: 13px; }
-
-  details {
-    border:1px solid #e5e7eb;
-    border-radius:10px;
-    padding: 10px 12px;
-    margin: 12px 0;
-    background:#fafafa;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; max-width:860px; margin:0 auto; padding:0 16px 60px;
+    background:#fff; color:#111;
   }
 
-  /* 🔹 Summary başlıklarını güçlendirme (bold + mavi + hover efekti) */
+  /* Üst bar */
+  .topbar {
+    background:var(--brand); color:#fff;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:10px 16px; position:sticky; top:0; z-index:10;
+  }
+  .topbar span { font-weight:600; letter-spacing:0.3px; }
+  .topbar a {
+    color:#fff; text-decoration:none; font-size:14px; border:1px solid #fff;
+    border-radius:6px; padding:4px 8px; transition:all .2s ease;
+  }
+  .topbar a:hover { background:#fff; color:var(--brand); }
+
+  header { padding:16px 0 4px; border-bottom:1px solid #eee; margin-bottom:16px; }
+  h1 { font-size:22px; margin:4px 0 6px; color:var(--brand); }
+  .meta { color:#555; font-size:13px; }
+
+  details { border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:12px 0; background:var(--light); }
   summary {
-    cursor:pointer;
-    font-weight: 700;          /* kalın */
-    color: var(--brand);       /* kurumsal mavi */
-    font-size: 17px;
-    padding: 4px 0;
-    transition: color 0.2s ease;
+    cursor:pointer; font-weight:700; color:var(--brand); font-size:17px;
+    padding:4px 0; transition:color .2s ease;
   }
-  summary:hover {
-    color: #0069aa;            /* hover rengi */
-  }
+  summary:hover { color:#0069aa; }
 
-  /* 🔹 Paragraflar ve listeler arası boşluklar */
-  p {
-    margin: 10px 0 16px;
-    line-height: 1.7;
-  }
-  ul, ol {
-    margin: 10px 0 18px 20px;
-    padding-left: 20px;
-  }
-  li { margin-bottom: 6px; }
+  p { margin:10px 0 16px; line-height:1.7; }
+  ul, ol { margin:10px 0 18px 20px; padding-left:20px; }
+  li { margin-bottom:6px; }
 
-  .section {
-    margin-top:8px;
-    color:#111;
-    white-space:pre-wrap;
-  }
-
-  .cta {
-    display:inline-block;
-    background: var(--brand);
-    color:#fff;
-    border:none;
-    padding:8px 12px;
-    border-radius:8px;
-    text-decoration:none;
-  }
-  .muted { color:#6b7280; font-size: 13px; }
+  .section { margin-top:8px; white-space:pre-wrap; }
   .foot {
-    margin-top: 24px;
-    padding-top: 12px;
-    border-top:1px solid #eee;
-    color:#6b7280;
-    font-size: 12px;
+    position:fixed; bottom:0; left:0; width:100%;
+    background:#f1f5f9; color:var(--gray); font-size:12px; text-align:center;
+    padding:6px 8px; border-top:1px solid #e5e7eb;
   }
 </style>
 </head>
 <body>
+
+<div class="topbar">
+  <span>Koray Karataş | 2K Eğitim Danışmanlık</span>
+  <a href="#">Ana Sayfa</a>
+</div>
+
 <header>
   <h1>CIA Tavukçuluk – Vaka Çalışması</h1>
   <div class="meta">İş Bankası | Tek Sayfa HTML | QR ile erişim</div>
@@ -94,33 +63,42 @@
 
 <details open>
   <summary>1) Tanışma / Genel Durum</summary>
-  <div class="section">Mehmet Bey’in sektörü, satış kanalları ve mevcut tahsilat yapısını okuyun. Müşteriyi ‘faiz pahalı’ diyen biri olarak değil, nakit döngüsü sıkışan bir girişimci olarak konumlayın.</div>
+  <div class="section">
+Mehmet Bey’in sektörü, satış kanalları ve mevcut tahsilat yapısını okuyun. Müşteriyi ‘faiz pahalı’ diyen biri olarak değil, nakit döngüsü sıkışan bir girişimci olarak konumlayın.
+  </div>
 </details>
 
 <details>
   <summary>2) Sorun Analizi / Ana Çıkarımlar</summary>
-  <div class="section">Alış ve satış vadelerindeki makas kapanıyor. Soğuk hava deposu yatırımı lojistik ve pazarlık gücü sağlayacak, ancak ‘likidite’ tarafında plan gerekli.</div>
+  <div class="section">
+Alış ve satış vadelerindeki makas kapanıyor. Soğuk hava deposu yatırımı lojistik ve pazarlık gücü sağlayacak, ancak ‘likidite’ tarafında plan gerekli.
+  </div>
 </details>
 
 <details>
   <summary>3) Ürün / Çözüm Alternatifleri (Okurken önceliklendirin)</summary>
-  <div class="section">- POS / Tahsilat altyapısı
-- Vadesiz mevduat trafiğinin bankaya taşınması
-- Nakit yönetimi planı
-- Depo yatırımı sonrası ürün ve kredi hazırlığı
-- Çapraz satış: Çek defteri, DBS vb.</div>
+  <div class="section">
+- POS / Tahsilat altyapısı  
+- Vadesiz mevduat trafiğinin bankaya taşınması  
+- Nakit yönetimi planı  
+- Depo yatırımı sonrası ürün ve kredi hazırlığı  
+- Çapraz satış: Çek defteri, DBS vb.
+  </div>
 </details>
 
 <details>
   <summary>4) Eğitmen Notları / Tartışma Soruları</summary>
-  <div class="section">- ‘Kredi pahalı’ itirazını ‘sermaye verimliliği’ eksenine çevirin.
-- Reel maliyet ve döngü sayısı: Finans pahalı değil, atıl sermaye pahalı.
-- Zamanlama: Depo sonrası likidite planını netleştirin.</div>
+  <div class="section">
+- ‘Kredi pahalı’ itirazını ‘sermaye verimliliği’ eksenine çevirin.  
+- Reel maliyet ve döngü sayısı: Finans pahalı değil, atıl sermaye pahalı.  
+- Zamanlama: Depo sonrası likidite planını netleştirin.
+  </div>
 </details>
 
 <details>
   <summary>Ek: Tam Metin</summary>
-  <div class="section">10. Müşteri: CIA Tavukçuluk (Yeni Kazanım, İlk Temas, Finansman Çözümü ve Rehberlik) 
+  <div class="section">
+<div class="section"><strong>10. Müşteri: CIA Tavukçuluk (Yeni Kazanım, İlk Temas, Finansman Çözümü ve Rehberlik)</strong> 
 Bu vaka, bankacının doğru sorular sorarak ihtiyacı belirlemesi ve Mehmet Bey’in krediyi pahalı 
 görmek yerine işletmesi için bir yatırım aracı olarak değerlendirmesine yardımcı olması üzerine 
 kurgulanmıştır. Reel faiz hesabı ve işletme sermayesinin döngüsel kullanımı vurgulanarak müşterinin 
@@ -134,7 +112,7 @@ Marketlerden 30 günlük çek, kasaplardan ise açık hesap çalışmaktadır.
 Ancak Mehmet Bey’in karşı karşıya olduğu yeni bir zorluk var: Finansal baskılar ve vadelerdeki 
 değişiklik talepleri. 
     
-Mehmet Bey’in Durumu: 
+<strong>Mehmet Bey’in Durumu:</strong> 
 İşini büyütmek ve operasyonel verimliliğini artırmak isteyen Mehmet Bey, mevcut işletme modelinde 
 alım yaparken %20 nakit ödeme, %80’ini ise 45 günlük vadeli çek ile kapatmaktadır. Ancak son 
 dönemde tavuk çiftlikleri vadeleri kısaltmaya, marketler ise vadeyi uzatmaya çalışmaktadır.
@@ -146,7 +124,7 @@ tedarikçileri ve müşterileri karşısında daha güçlü bir pozisyon elde et
 Mehmet Bey, İş Bankası ile ticari bir geçmişi olmamasına rağmen, bireysel müşteri olarak bankada 
 kredi kartı olan bir müşteridir. Ancak ticari segmentte inaktif durumdadır. 
     
-Müşteri Temsilcisinin Yaklaşımı: 
+<strong>Müşteri Temsilcisinin Yaklaşımı:</strong> 
 Mehmet Bey ile daha önce çalışmayan şube portföy yöneticisi, müşteri taraması sırasında onun 
 işletmesini fark etti ve kendisiyle bir tanışma görüşmesi gerçekleştirdi. İlk telefon görüşmesi yalnızca 
 Mehmet Bey’i tanımak ve mevcut işleyişi anlamak amacıyla yapıldı. 
@@ -163,7 +141,7 @@ Firma ile geliştirilecek olan ilişki kapsamında, operasyonel tahsilatların �
 toplanması yönünde teklif sunulabilir. Bu sayede vadesiz mevduat tarafında istikrarlı ve sürdürülebilir 
 bir artış sağlanabilir. 
  
-Soğuk Hava Deposu Yatırımı: 
+<strong>Soğuk Hava Deposu Yatırımı:</strong> 
 Mehmet Bey, soğuk hava deposu yatırımını bir krediyle değil, ailesine ait bir evi satarak finanse 
 etmeye karar vermiştir. Banka, ipotek karşılığı finansman sağlayabileceğini söylese de Mehmet Bey 
 evin satışını çoktan yaptığını ve depo inşaatının son aşamaya geldiğini belirtmiştir. 
@@ -175,7 +153,7 @@ yaparak iş hacmini artırabilecek. (cid:33061)(cid:57281) Lojistik maliyetlerin
 Bu yeni yapı, Mehmet Bey’in finansal esnekliğini artıracak ve işletmesinin büyüme fırsatlarını 
 genişletecektir. 
     
-Rehberlik: Portföy yöneticisi, Mehmet Bey’in “Krediler çok pahalı” itirazını dikkate alarak ihtiyacını 
+<strong>Rehberlik:</strong> Portföy yöneticisi, Mehmet Bey’in <strong>“Krediler çok pahalı”</strong> itirazını dikkate alarak ihtiyacını 
 daha iyi anlamaya yönelik sorular sordu: 
 -->  Mevcut işletme sermayesi döngüye yetiyor mu? 
 -->  Soğuk hava deposu işletmenin büyümesine mi, yoksa lojistik maliyetini düşürmeye mi hizmet 
@@ -183,13 +161,13 @@ edecek?
 --> Şu anki finansal baskıyı nasıl yönetiyor? 
 --> Depo tamamlandığında artan kapasiteyi nasıl finanse edecek? 
 
-Mehmet Bey’in yanıtları doğrultusunda şu kritik bilgi ortaya çıktı: 
+<strong>Mehmet Bey’in yanıtları doğrultusunda şu kritik bilgi ortaya çıktı:</strong> 
 --> Mehmet Bey’in işletmesi yılda toplam 18 defa döngü yapıyor. 
 --> Ek finansman sağlansa bile iş hacmi gereği döngü sayısını artırmak pek mümkün değil. 
 --> Ancak soğuk hava deposu sayesinde alım koşullarını iyileştirme, kârlılığı ve döngüyü 
 artırma potansiyeli var. 
     
-Finansal Analiz: Kredinin Gerçek Maliyeti 
+<strong>Finansal Analiz: Kredinin Gerçek Maliyeti</strong> 
 -->Müşteri 1 milyon TL kredi alsa, faiz oranı %4.30 ile 24 aylık kredi kullanırsa: 
    o  Aylık Taksit: 69.090,34 TL 
    o  Toplam Maliyet: 1.669.168,16 TL 
@@ -200,7 +178,7 @@ Bu noktada Mehmet Bey için kritik bir farkındalık yaratılmalı ve müşteriy
 sağlayabilecek rehberlik sunulmalı: Gerçek maliyet yalnızca kredi faiz oranı değildir. İşletme 
 sermayesinin döngüye girmesiyle, maliyet efektif olarak düşebilir. 
 
-Finansal Analiz: Kredinin Ticari Faaliyete Konu Edildikten Sonraki Maliyeti 
+<strong>Finansal Analiz: Kredinin Ticari Faaliyete Konu Edildikten Sonraki Maliyeti</strong>  
 --> Mehmet Bey, aldığı krediyi ticarette 6 kez döndürerek kullanıyor. 
 --> Her döngüde %20 kâr elde ettiğine göre: 
   o  Her 1 milyon TL'lik döngüde kâr: 200.000 TL 
@@ -211,7 +189,7 @@ Finansal Analiz: Kredinin Ticari Faaliyete Konu Edildikten Sonraki Maliyeti
     Bu hesaplama, bankacının Mehmet Bey’e finansmanın aslında pahalı olmadığını ve işletmesine 
 stratejik bir avantaj kazandırabileceğini gösterebilmesi açısından kritik öneme sahiptir. 
 
-Ürün/Fırsatlar: 
+<strong>Ürün/Fırsatlar:</strong>  
 1.  POS Hizmeti (veya Tahsilat Altyapısı) 
     o  Marketlerden çek alıyor, POS kullanımı yok gibi duruyor ama tahsilat altyapısı bir 
        ihtiyaç. 
@@ -225,7 +203,7 @@ stratejik bir avantaj kazandırabileceğini gösterebilmesi açısından kritik 
 6.  Soğuk hava deposu yatırımı sonrası operasyon hacmi artacağından, gelecekte yüksek 
     kredilendirme ve ürün ihtiyacı doğacaktır. 
 
-Önerilen Aksiyonlar: 
+<strong>Önerilen Aksiyonlar:</strong>  
 --> Mehmet Bey’e finansmanın gerçek maliyetinin anlatılması.  
 --> Vadesiz mevduat kazanımı kapsamında, çek Defteri ve diğer çapraz satış ürünlerinin 
 kazandırılması fırsatı  
@@ -235,16 +213,19 @@ kazandırılması fırsatı
 --> Mehmet Bey’in ticari kredi kullanma zamanlamasının optimize edilmesi.  
 --> Müşteriye finansal rehberlik sunularak İş Bankası ile güçlü bir iş ilişkisi kurulması. 
 
-Yol Haritası Önerisi: 
+<strong>Yol Haritası Önerisi:</strong>  
 --> Depo sonrası döneme dair bir “nakit yönetimi planı” hazırlanarak güven kazanılmalı. 
 --> Gerçek Faiz Maliyetinin Gösterilmesi: 
     o  Döngüsel ticaret mantığıyla finansmanın faydası anlatılarak itirazlar aşılmalı. 
 --> POS veya DBS Tahsilat Altyapısı Önerisi: 
     o  Çekli ve açık hesap çalışma modeli, dijital tahsilat sistemleri ile desteklenmeli.</div>
 </details>
+  </div>
+</details>
 
 <div class="foot">
-  Bu sayfa hızlı eğitim içi kullanım için sadeleştirilmiştir. QR ile açıldığında bölümler eğitmen kontrolünde adım adım ilerler.
+  Bu sayfa yalnızca eğitim sırasında kullanılmak üzere hazırlanmıştır. © 2K Eğitim Danışmanlık
 </div>
+
 </body>
 </html>
