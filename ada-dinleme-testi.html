@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DİNLEME TESTİ – Katılımcı Testi</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --brand:#004481; --light:#f9fafb; --gray:#6b7280; --border:#e5e7eb; }
+  html,body { margin:0; padding:0; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; max-width:860px; margin:0 auto; padding:0 16px 80px; color:#111; background:#fff;
+  }
+  .topbar {
+    background:var(--brand); color:#fff; display:flex; justify-content:space-between; align-items:center;
+    padding:10px 16px; position:sticky; top:0; z-index:10;
+  }
+  .topbar span { font-weight:600; letter-spacing:0.3px; }
+  .topbar a { color:#fff; text-decoration:none; font-size:14px; border:1px solid #fff; border-radius:6px; padding:4px 8px; }
+  .topbar a:hover { background:#fff; color:var(--brand); }
+  header { padding:16px 0 6px; border-bottom:1px solid #eee; margin-bottom:12px; }
+  h1 { font-size:22px; margin:4px 0 6px; color:var(--brand); }
+  .meta { color:#555; font-size:13px; }
+  .card { background:var(--light); border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin:14px 0; }
+  .q { background:#fff; border:1px solid var(--border); border-radius:10px; padding:10px 12px; margin:10px 0; }
+  .q p { margin:0 0 8px 0; }
+  .opts label { margin-right:10px; }
+  .opts input[type=radio] { transform: translateY(1px); }
+  .actions { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+  .btn { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 12px; cursor:pointer; }
+  .btn.secondary { background:#374151; }
+  .btn.ghost { background:#e5e7eb; color:#111; }
+  .foot {
+    position:fixed; bottom:0; left:0; width:100%; background:#f1f5f9; color:#6b7280; font-size:12px; text-align:center;
+    padding:6px 8px; border-top:1px solid var(--border);
+  }
+  .legend { font-size:14px; color:#374151; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Koray Karataş | 2K Eğitim Danışmanlık</span>
+  <a href="#">Ana Sayfa</a>
+</div>
+
+<header>
+  <h1>DİNLEME TESTİ</h1>
+  <div class="meta">İş Yarım – Katılımcı Testi (D / Y / B işaretleyin)</div>
+</header>
+
+<div class="card">
+<p class='legend'>Ne Demek İstiyoruz-sunuz?</p><p class='legend'>Öneri büyük bir çoğunlukla kabul edildi.</p><p class='legend'>(Öneri lehindeki oyların yüzdesi nedir?)					_________</p><p class='legend'>Komşum pahalı bir araba almış.</p><p class='legend'>(Kaça mal olmuştur?) 							_________</p><p class='legend'>Taksici Ahmet, BES’te baya para biriktirmiş.</p><p class='legend'>(Ne kadar biriktirmiştir?)							_________</p><p class='legend'>Patronum yaşlı bir adamdır.</p><p class='legend'>(Kaç yaşında?) 								_________</p><p class='legend'>Bu yaz türlü türlü filmler gördüm.</p><p class='legend'>(Kaç film gördüm?) 							_________</p><p class='legend'>Kırmızı renkli bir araba müthiş bir süratle kaçıyordu.</p><p class='legend'>(Sizce arabanın marka ve modeli ne?)				   	_________</p><p class='legend'>Kredi kartı borcumu kapatma operasyonunu tam bir başarıyla 
+uyguladım.</p><p class='legend'>(Ne kadar borcu vardı?) 							_________</p><p class='legend'>Tamirci arabanızın motoruna bakıp şöyle diyor: 
+“Bunu yapmak biraz vakit alır.”</p><p class='legend'>(Ne kadar vakit alır?) 							_________</p><p class='legend'>Bir e-postada şöyle yazdınız: “Yakın bir gelecekte bizden 
+haber alacaksınız.”</p><p class='legend'>(Ne zaman?) 								_________</p><p class='legend'>Karımın akrabaları çok rahat yaşarlar.</p><p class='legend'>(Yıllık gelirleri nedir?) 							_________</p><p class='legend'>Kadın, geçen bunca zamana rağmen kocasının hâlâ bekâr gibi</p><p class='legend'>yaşadığından şikayetçi.</p><p class='legend'>(Kaç yıldır evliler?) 							_________</p>
+</div>
+
+<form class="card" id="form">
+
+  <div class="q">
+    <p><strong>1.</strong> DİNLEME TESTİ</p>
+    <div class="opts">
+      <label><input type="radio" name="q1" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q1" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q1" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>2.</strong> Ne Demek İstiyoruz-sunuz?</p>
+    <div class="opts">
+      <label><input type="radio" name="q2" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q2" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q2" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>3.</strong> Öneri büyük bir çoğunlukla kabul edildi.</p>
+    <div class="opts">
+      <label><input type="radio" name="q3" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q3" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q3" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>4.</strong> (Öneri lehindeki oyların yüzdesi nedir?)					_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q4" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q4" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q4" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>5.</strong> Komşum pahalı bir araba almış.</p>
+    <div class="opts">
+      <label><input type="radio" name="q5" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q5" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q5" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>6.</strong> (Kaça mal olmuştur?) 							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q6" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q6" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q6" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>7.</strong> Taksici Ahmet, BES’te baya para biriktirmiş.</p>
+    <div class="opts">
+      <label><input type="radio" name="q7" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q7" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q7" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>8.</strong> (Ne kadar biriktirmiştir?)							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q8" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q8" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q8" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>9.</strong> Patronum yaşlı bir adamdır.</p>
+    <div class="opts">
+      <label><input type="radio" name="q9" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q9" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q9" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>10.</strong> (Kaç yaşında?) 								_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q10" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q10" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q10" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>11.</strong> Bu yaz türlü türlü filmler gördüm.</p>
+    <div class="opts">
+      <label><input type="radio" name="q11" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q11" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q11" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>12.</strong> (Kaç film gördüm?) 							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q12" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q12" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q12" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>13.</strong> Kırmızı renkli bir araba müthiş bir süratle kaçıyordu.</p>
+    <div class="opts">
+      <label><input type="radio" name="q13" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q13" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q13" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>14.</strong> (Sizce arabanın marka ve modeli ne?)				   	_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q14" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q14" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q14" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>15.</strong> Kredi kartı borcumu kapatma operasyonunu tam bir başarıyla 
+uyguladım.</p>
+    <div class="opts">
+      <label><input type="radio" name="q15" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q15" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q15" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>16.</strong> (Ne kadar borcu vardı?) 							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q16" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q16" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q16" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>17.</strong> Tamirci arabanızın motoruna bakıp şöyle diyor: 
+“Bunu yapmak biraz vakit alır.”</p>
+    <div class="opts">
+      <label><input type="radio" name="q17" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q17" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q17" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>18.</strong> (Ne kadar vakit alır?) 							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q18" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q18" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q18" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>19.</strong> Bir e-postada şöyle yazdınız: “Yakın bir gelecekte bizden 
+haber alacaksınız.”</p>
+    <div class="opts">
+      <label><input type="radio" name="q19" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q19" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q19" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>20.</strong> (Ne zaman?) 								_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q20" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q20" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q20" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>21.</strong> Karımın akrabaları çok rahat yaşarlar.</p>
+    <div class="opts">
+      <label><input type="radio" name="q21" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q21" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q21" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>22.</strong> (Yıllık gelirleri nedir?) 							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q22" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q22" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q22" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>23.</strong> Kadın, geçen bunca zamana rağmen kocasının hâlâ bekâr gibi</p>
+    <div class="opts">
+      <label><input type="radio" name="q23" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q23" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q23" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>24.</strong> yaşadığından şikayetçi.</p>
+    <div class="opts">
+      <label><input type="radio" name="q24" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q24" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q24" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="q">
+    <p><strong>25.</strong> (Kaç yıldır evliler?) 							_________</p>
+    <div class="opts">
+      <label><input type="radio" name="q25" value="D"> D (Doğru)</label>
+      <label><input type="radio" name="q25" value="Y"> Y (Yanlış)</label>
+      <label><input type="radio" name="q25" value="B"> B (Bilinmiyor)</label>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="btn" onclick="clearForm()">Tüm İşaretleri Temizle</button>
+    <button type="button" class="btn secondary" onclick="window.print()">Yazdır / PDF</button>
+  </div>
+</form>
+
+<div class="foot">Bu sayfa yalnızca eğitim sırasında kullanılmak üzere hazırlanmıştır. © 2K Eğitim Danışmanlık</div>
+
+<script>
+  function clearForm() {
+    document.querySelectorAll('input[type=radio]').forEach(r => r.checked = false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
