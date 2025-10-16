@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ne Demek İstiyoruz? – Katılımcı Formu</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --brand:#004481; --light:#f9fafb; --gray:#6b7280; --border:#e5e7eb; }
+  html,body { margin:0; padding:0; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; max-width:860px; margin:0 auto; padding:0 16px 70px; color:#111; background:#fff;
+  }
+  .topbar {
+    background:var(--brand); color:#fff; display:flex; justify-content:space-between; align-items:center;
+    padding:10px 16px; position:sticky; top:0; z-index:10;
+  }
+  .topbar span { font-weight:600; letter-spacing:0.3px; }
+  .topbar a { color:#fff; text-decoration:none; font-size:14px; border:1px solid #fff; border-radius:6px; padding:4px 8px; }
+  .topbar a:hover { background:#fff; color:var(--brand); }
+  header { padding:16px 0 6px; border-bottom:1px solid #eee; margin-bottom:12px; }
+  h1 { font-size:22px; margin:4px 0 6px; color:var(--brand); }
+  .meta { color:#555; font-size:13px; }
+  .card { background:var(--light); border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin:14px 0; }
+  p { margin:10px 0 14px; line-height:1.7; }
+  ul { margin:10px 0 16px 20px; padding-left:18px; }
+  li { margin-bottom:8px; }
+  input.blank {
+    border:1px solid var(--border); border-radius:6px; padding:6px 8px; font-size:16px; outline:none;
+  }
+  input.blank:focus { border-color:var(--brand); box-shadow:0 0 0 2px #00448122; }
+  .actions { display:flex; gap:8px; margin-top:10px; }
+  .btn { background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 12px; cursor:pointer; }
+  .btn.secondary { background:#374151; }
+  .foot {
+    position:fixed; bottom:0; left:0; width:100%; background:#f1f5f9; color:var(--gray); font-size:12px; text-align:center;
+    padding:6px 8px; border-top:1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Koray Karataş | 2K Eğitim Danışmanlık</span>
+  <a href="#">Ana Sayfa</a>
+</div>
+
+<header>
+  <h1>Ne Demek İstiyoruz?</h1>
+  <div class="meta">İş Yarım – Katılımcı Formu (Boşlukları doldurun)</div>
+</header>
+
+<div class="card" id="content">
+<p>Ne Demek İstiyoruz-sunuz?</p>
+<p></p>
+<p></p>
+<p>Öneri büyük bir çoğunlukla kabul edildi. 				</p>
+<p>(Öneri lehindeki oyların yüzdesi nedir?)					<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Komşum pahalı bir araba almış. 					</p>
+<p>(Kaça mal olmuştur?) 							<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Taksici Ahmet, BES’te baya para biriktirmiş.		 	</p>
+<p>(Ne kadar biriktirmiştir?)							<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Patronum yaşlı bir adamdır. 						</p>
+<p>(Kaç yaşında?) 								<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Bu yaz türlü türlü filmler gördüm. 					</p>
+<p>(Kaç film gördüm?) 							<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Kırmızı renkli bir araba müthiş bir süratle kaçıyordu.	 </p>
+<p>(Sizce arabanın marka ve modeli ne?)				   	<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Kredi kartı borcumu kapatma operasyonunu tam bir başarıyla </p>
+<p>uyguladım. 								</p>
+<p>(Ne kadar borcu vardı?) 							<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Tamirci arabanızın motoruna bakıp şöyle diyor: </p>
+<p>“Bunu yapmak biraz vakit alır.” 					</p>
+<p>(Ne kadar vakit alır?) 							<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Bir e-postada şöyle yazdınız: “Yakın bir gelecekte bizden </p>
+<p>haber alacaksınız.” 							</p>
+<p>(Ne zaman?) 								<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Karımın akrabaları çok rahat yaşarlar. 				</p>
+<p>(Yıllık gelirleri nedir?) 							<input class="blank" type="text" size="6" /></p>
+<p></p>
+<p>Kadın, geçen bunca zamana rağmen kocasının hâlâ bekâr gibi </p>
+<p>yaşadığından şikayetçi. 					</p>
+<p>(Kaç yıldır evliler?) 							<input class="blank" type="text" size="6" /></p>
+</div>
+
+<div class="card">
+  <div class="actions">
+    <button class="btn" onclick="clearInputs()">Metnimi Temizle</button>
+    <button class="btn secondary" onclick="window.print()">Yazdır / PDF</button>
+  </div>
+  <p class="meta">Bu form kişisel kullanım içindir; yanıtlar herhangi bir yere gönderilmez/kaydedilmez.</p>
+</div>
+
+<div class="foot">Bu sayfa yalnızca eğitim sırasında kullanılmak üzere hazırlanmıştır. © 2K Eğitim Danışmanlık</div>
+
+<script>
+  function clearInputs() {
+    document.querySelectorAll('input.blank').forEach(i => i.value = '');
+  }
+</script>
+</body>
+</html>
